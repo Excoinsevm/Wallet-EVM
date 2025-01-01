@@ -37,11 +37,14 @@ export const Main = () => {
             <AccountData/>
           </CardBody>
           <CardFooter className="flex justify-end p-3">
-              
-              <Button isIconOnly className="bg-gradient-to-tr from-orange-500 to-red-500 text-white text-tiny" 
-                  onClick={onCloseAll}>
-                <CancelPresentationIcon/>
-              </Button> 
+            <Button 
+              isIconOnly 
+              className="bg-gradient-to-tr from-orange-500 to-red-500 text-white text-tiny" 
+              onClick={() => window.location.href = "https://t.me/TrigonEVM"}
+              aria-label="Open Chat"
+              >
+              💬
+            </Button> 
           </CardFooter>
         </Card>
       </div>

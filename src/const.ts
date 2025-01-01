@@ -4,7 +4,7 @@ import { RPC } from "./types";
 export const defaultRPC:RPC = { name: 'Trigon' , url: 'https://rpc.trigonevm.space' }
 
 export const defaultRPCs:RPC[] = [{ name: 'Trigon' , url: 'https://rpc.trigonevm.space' },
-{ name: 'Sepolia', url: 'https://sepolia.infura.io/v3/956866d0afef41b99580468d27c7976d'}]
+{ name: 'Bitrock', url: 'https://connect.bit-rock.io'}]
 
 export const Default_MIN_Unlock = 15
 

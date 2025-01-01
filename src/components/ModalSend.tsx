@@ -36,7 +36,7 @@ export const ModalSend :React.FC<Props> = ({isOpen,onClose,token,account}) => {
         response.then(res => {
             if(res.response)
             toast({
-                title: 'Transferencia enviada',
+                title: 'Transfer sent',
                 description: 'Tx:'+ res.tx.hash,
                 status: 'success',
                 duration: 3000,
@@ -44,7 +44,7 @@ export const ModalSend :React.FC<Props> = ({isOpen,onClose,token,account}) => {
               })
               else
                 toast({
-                  title: 'Ocurrio un error',
+                  title: 'An error has taken place',
                   description: 'Tx:'+ res.tx,
                   status: 'error',
                   duration: 3000,
@@ -57,11 +57,11 @@ export const ModalSend :React.FC<Props> = ({isOpen,onClose,token,account}) => {
     <Modal className="p-3" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
             <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">
-                Enviar {token?token.simbol:'ETH'}
+                Send {token?token.simbol:'TRI'}
             </ModalHeader>
             <ModalBody className="grid">
               <div className="flex justify-items-center gap-1">
-                <Input className="rounded-xl shadow-lg" label="Enviar a ..." type="text" value={address}
+                <Input className="rounded-xl shadow-lg" label="Send to wallet..." type="text" value={address}
                   isRequired
                   onChange={(e) => setAddress(e.target.value)}
                   isInvalid={!IsValidAddress(address)} />
@@ -70,7 +70,7 @@ export const ModalSend :React.FC<Props> = ({isOpen,onClose,token,account}) => {
 
                   </Button>
               </div>          
-                <Input className="rounded-xl shadow-lg" isRequired label="Cantidad" type="number"
+                <Input className="rounded-xl shadow-lg" isRequired label="Amount" type="number"
                   value={cantidad}
                   onChange={(e) => {setCantidad(e.target.value)}}/>
                 <Input className="rounded-xl shadow-lg" isRequired type="password" label="Password"
@@ -80,7 +80,7 @@ export const ModalSend :React.FC<Props> = ({isOpen,onClose,token,account}) => {
                 <Button className="btn-gradient rounded-full text-white"
                   isDisabled={!IsValidAddress(address)||unlock.length===0}
                   isLoading={loading}
-                  onClick={HandleOnSendClick}>Enviar</Button>
+                  onClick={HandleOnSendClick}>Send</Button>
             </ModalFooter>
         </ModalContent>
     </Modal>

@@ -16,10 +16,10 @@ export const Init = () => {
         <Card className="max-w-[400px]">
             <CardHeader className="grid justify-items-center">
                 <h1 className="text-4xl text-orange-900 m-5">
-                    Bienvenido a tu Billetera
+                    Trigon Wallet
                 </h1>
                 <h2 className="text text-wrap text-lg font-serif ml-10 mr-10">
-                    Crea tu cuenta de forma rapida y segura
+                    Create a Trigon wallet quick and easy
                 </h2>
             </CardHeader>            
             <CardBody className="flex justify-items-center">
@@ -29,13 +29,13 @@ export const Init = () => {
                             className="btn-gradient text-white">
                             <LibraryAddIcon/>
                         </Button>
-                        <div className="text text-justify font-serif">Crear cuenta nueva</div>
+                        <div className="text text-justify font-serif">Create new wallet</div>
                     </div>
                     <div className="grid m-5 justify-items-center">
                         <Button as={Link} size='lg' isIconOnly
                             className="btn-gradient text-white" 
                             onClick={() => setShowImport(true)} ><SystemUpdateAltIcon/> </Button>
-                        <div className="text text-center font-serif mt-3">Importar una cuenta</div>                        
+                        <div className="text text-center font-serif mt-3">Import wallet</div>                        
                     </div>
                 </div>
                 <Importar showImport={showImport} setAccount={setAccount}/>

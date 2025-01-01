@@ -20,23 +20,23 @@ export const Settings = () => {
             <Card className="p-3">
                 <CardHeader className="justify-center max-w-[340px]">
                     <div className="font font-bold text-2xl text-orange-800">
-                        Configuración
+                        Settings
                     </div>
                 </CardHeader>
                 <CardBody className="gap-3">
-                    {viewConfig === ViewConfigPage.INDEX && <Configuration setViewConfig={setViewConfig}/>}
+                    {viewConfig === ViewConfigPage.INDEX && <Settings setViewConfig={setViewConfig}/>}
                     {viewConfig === ViewConfigPage.RPC && <RPC/>}
-                    {viewConfig === ViewConfigPage.EXPORT && <Exportar/>}
+                    {viewConfig === ViewConfigPage.EXPORT && <Export wallet/>}
                 </CardBody>
                 <CardFooter className="flex justify-center">
                     { viewConfig !== ViewConfigPage.INDEX && <Button onClick={() => setViewConfig(ViewConfigPage.INDEX)}
                         className="btn-gradient text-white">
-                            <FirstPageIcon/> Atrás
+                            <FirstPageIcon/> Back
                         </Button>
                     }
                     { viewConfig === ViewConfigPage.INDEX && <Button as={Link} href="/"
                         className="btn-gradient text-white">
-                            <FirstPageIcon/> Atrás
+                            <FirstPageIcon/> Back
                         </Button>
                     }
                 </CardFooter>

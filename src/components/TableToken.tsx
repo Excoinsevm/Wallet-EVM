@@ -80,9 +80,9 @@ export const TableToken: React.FC = () => {
             </div>}> 
          <TableHeader>
              <TableColumn>Token</TableColumn>
-             <TableColumn >cantidad</TableColumn>
-             <TableColumn>Enviar</TableColumn>
-             <TableColumn>Quitar</TableColumn>
+             <TableColumn >Amount</TableColumn>
+             <TableColumn>Send</TableColumn>
+             <TableColumn>Remove</TableColumn>
          </TableHeader>
          <TableBody>
              {tokenList[defaultRPC]?.map((element,key) => (

@@ -3,10 +3,8 @@ import { useAccount } from "../store/useAccount";
 import { AccountData } from "./AccountData";
 import { Navigate } from "react-router-dom";
 import { Button, Card, CardHeader, CardBody, CardFooter, Link, Spinner } from "@nextui-org/react";
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import { FooterPending } from "./FooterPending";
 import { usePending } from "../store/usePending";
-import { useRPC } from "../store/useRPC";
 
 export const Main = () => {
   const {account} = useAccount()

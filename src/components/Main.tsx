@@ -23,7 +23,7 @@ export const Main = () => {
         <Card className="p-3">
           <CardHeader className="flex justify-between justify-items-center gap-3">
               <div className="font font-bold text-2xl">
-                Datos de la Cuenta
+                Wallet Info
               </div>
               <div className="flex justify-center justify-items-center">
                 {/* Notificaciones */}

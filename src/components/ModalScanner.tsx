@@ -12,7 +12,7 @@ export const ModalScanner: React.FC<Props> = ({isOpen,onClose,setAddress}) => {
         <Modal className="p-3" isOpen={isOpen} onClose={onClose}>
         <ModalContent>
             <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">
-                Escanea la direccion
+                Scan QR code
             </ModalHeader>
             <ModalBody>                          
                 <Scanner

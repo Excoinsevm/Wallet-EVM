@@ -30,13 +30,13 @@ export const ModalAddToken: React.FC<Props> = ({isOpen,onClose,addToken}) => {
     return(<>
         <Modal className="p-3" isOpen={isOpen} onClose={onClose}>
           <ModalContent>
-            <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">Agreagar token</ModalHeader>
+            <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">Import token</ModalHeader>
             <ModalBody >
                 <div className="grid justify-center gap-3">          
                    <div>
                        <Input type="text"
                             isRequired
-                            label='Dirección del contrato' 
+                            label='Contract Address' 
                             onChange={(e) => setContractToAdd(
                                 {
                                     address: e.target.value,
@@ -46,15 +46,15 @@ export const ModalAddToken: React.FC<Props> = ({isOpen,onClose,addToken}) => {
                                 })}/>
                     </div>
                    <div>
-                      <Input isReadOnly type="text" value={contractToAdd.simbol} label="Símbolo"/>
+                      <Input isReadOnly type="text" value={contractToAdd.simbol} label="Simbol"/>
                    </div>
                    <div>
-                      <Input isReadOnly type="text" value={contractToAdd.decimals.toString()} label="Decimales"/>
+                      <Input isReadOnly type="text" value={contractToAdd.decimals.toString()} label="Decimals"/>
                    </div>
                 </div>
             </ModalBody>
             <ModalFooter>
-              <Button isDisabled={contractToAdd.simbol === ''} className="btn-gradient text-white rounded-full" onClick={AddToken}>Agregar</Button>
+              <Button isDisabled={contractToAdd.simbol === ''} className="btn-gradient text-white rounded-full" onClick={AddToken}>Import</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

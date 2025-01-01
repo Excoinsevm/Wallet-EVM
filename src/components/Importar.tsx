@@ -30,7 +30,7 @@ export const Importar:React.FC<Props> = ({showImport, setAccount}) => {
                     setLoading(false)
                     toast({
                         title: 'Advertencia',
-                        description: "El archivo no es compatible",
+                        description: "The provided file is not compatible",
                         status: 'error',
                         duration: 5000,
                         isClosable: true
@@ -42,13 +42,13 @@ export const Importar:React.FC<Props> = ({showImport, setAccount}) => {
     return(<>
         <div className={showImport ? 'mb-4' : 'mb-4 hidden'} >
             <div className="grid justify-items-center p-3 gap-3" >
-                <div className="font font-semibold">Importar cuenta (.pk) <span className="font text-red-700">*</span></div> 
+                <div className="font font-semibold">Import wallet (.pk) <span className="font text-red-700">*</span></div> 
                 <input hidden type="file" ref={fileInputRef} multiple={false} onChange={ readFile }/>
                 <Button className="btn-gradient text-white" isLoading={loading}
-                    onClick={() => fileInputRef.current?.click()}>Importar </Button>
+                    onClick={() => fileInputRef.current?.click()}>Import </Button>
             </div>
             <div className="grid justify-items-center gap-3">
-                <div className="font font-mono">"Nunca compartas la llave privada."</div>    
+                <div className="font font-mono">"Do not share your ptivate key or seedphrase with anyone."</div>    
             </div>
         </div>
     </>)

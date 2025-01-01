@@ -9,13 +9,8 @@ import { usePending } from "../store/usePending";
 import { useRPC } from "../store/useRPC";
 
 export const Main = () => {
-  const { account, ClearAccount } = useAccount()
-  const { ClearRPC } = useRPC()
+  const {account} = useAccount()
   const {pending} = usePending()
-  const onCloseAll = () => {
-    ClearAccount()
-    ClearRPC()
-  }
   return(
   <>
     { !account && <Navigate to='/setup'/>}

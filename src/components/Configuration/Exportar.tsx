@@ -13,13 +13,13 @@ export const Exportar = () => {
     }
     return(<>
         <div className="font font-semibold text-lg text-orange-800 flex justify-center">
-            Exportar cuenta
+            Export Wallet
         </div>
         <div className="flex justify-center align-middle gap-3">
-            <Input type="text" placeholder="Nombre del archivo (.pk)" 
+            <Input type="text" placeholder="File name (.pk)" 
                 value={fileName} onChange={(e)=> setFileName(e.target.value)}/>
             <Button className="btn-gradient text-white"
-                onClick={() => onClickExport()}>guardar</Button>
+                onClick={() => onClickExport()}>Save</Button>
         </div>
     </>)
 }

@@ -29,7 +29,7 @@ export const Importar:React.FC<Props> = ({showImport, setAccount}) => {
                     }).catch(() => {
                     setLoading(false)
                     toast({
-                        title: 'Advertencia',
+                        title: 'Warning',
                         description: "The provided file is not compatible",
                         status: 'error',
                         duration: 5000,

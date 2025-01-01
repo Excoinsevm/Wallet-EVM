@@ -24,9 +24,9 @@ export const Settings = () => {
                     </div>
                 </CardHeader>
                 <CardBody className="gap-3">
-                    {viewConfig === ViewConfigPage.INDEX && <Settings setViewConfig={setViewConfig}/>}
+                    {viewConfig === ViewConfigPage.INDEX && <Configuration setViewConfig={setViewConfig}/>}
                     {viewConfig === ViewConfigPage.RPC && <RPC/>}
-                    {viewConfig === ViewConfigPage.EXPORT && <Export wallet/>}
+                    {viewConfig === ViewConfigPage.EXPORT && <Exportar/>}
                 </CardBody>
                 <CardFooter className="flex justify-center">
                     { viewConfig !== ViewConfigPage.INDEX && <Button onClick={() => setViewConfig(ViewConfigPage.INDEX)}

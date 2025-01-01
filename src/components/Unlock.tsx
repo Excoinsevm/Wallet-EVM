@@ -44,7 +44,7 @@ export const Unlock = () => {
     return(
         <Card className="flex p-3">
             <CardHeader className="justify-center">
-                <div className="font font-bold text-xl text-orange-900">Desbloquee su billetera</div>
+                <div className="font font-bold text-xl text-orange-900">Enter your password to unlock</div>
             </CardHeader>
             <CardBody>
                 <Input className="border-1 rounded-xl border-orange-900" type={show ? 'text' : 'password'} 
@@ -52,7 +52,7 @@ export const Unlock = () => {
             </CardBody>
             <CardFooter className="flex justify-end">
                 <Button className="btn-gradient text-white"
-                        onClick={Aceptar}>Aceptar </Button>
+                        onClick={Aceptar}>Accept </Button>
             </CardFooter>
         </Card>
     )

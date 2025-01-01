@@ -15,7 +15,7 @@ export const Configuration: React.FC<Props> = ({setViewConfig}) => {
             </div>
             <div className="flex justify-center">
                 <Button onClick={()=> {setViewConfig(ViewConfigPage.EXPORT)}} radius="full"
-                 className="btn-gradient text-white w-full">Exportar cuenta</Button>
+                 className="btn-gradient text-white w-full">Export Wallet</Button>
             </div>      
         </>
     )

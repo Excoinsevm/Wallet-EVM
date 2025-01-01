@@ -38,10 +38,10 @@ export const RPC = () => {
             <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Agregar RPC</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">New RPC</ModalHeader>
               <ModalBody>
-                <Input type="text" isRequired label="Nombre" value={newNme} onChange={(e) => setNewName(e.target.value)}/>
-                <Input type="text" isRequired label="URL" value={newRPC} onChange={(e) => setNewRpc(e.target.value)} />
+                <Input type="text" isRequired label="RPC name" value={newNme} onChange={(e) => setNewName(e.target.value)}/>
+                <Input type="text" isRequired label="RpcURL" value={newRPC} onChange={(e) => setNewRpc(e.target.value)} />
               </ModalBody>
               <ModalFooter>
                 <Button className="rounded-full" variant="light" onPress={onClose}>
@@ -52,7 +52,7 @@ export const RPC = () => {
                         addRPC({name:newNme,url:newRPC});
                         setNewRpc('');
                         onClose()}}>
-                  Agregar
+                  Add
                 </Button>
               </ModalFooter>
             </>

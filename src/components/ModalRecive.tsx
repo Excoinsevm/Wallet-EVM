@@ -16,12 +16,12 @@ export const ModalRecive: React.FC<Props> = ({isOpen,onClose}) => {
     return(
         <Modal className="p-3" isOpen={isOpen} onClose={onClose}>
           <ModalContent>
-            <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">Escanee este código para recibir</ModalHeader>
+            <ModalHeader className="flex justify-center text-xl font-bold text-orange-700">Scan this QR code to receive</ModalHeader>
             <ModalBody >
                 <div className="flex justify-center">
                     {<QRCode value={account ? '0x'+ account.keystore.address : ''} size={200} bgColor="#282c34" fgColor="#fff" level="H" />}
                 </div>
-                <div className="flex justify-center">O copie la direccion a continuación:</div>
+                <div className="flex justify-center">Or copy your wallet address:</div>
                 <div className="flex justify-center">          
                    <div className="flex w-full text-sm rounded-l-full">
                       <input readOnly aria-label="" className="flex w-full text-center bg-gradient-to-tr from-gray-400 to-gray-600 text-white rounded-l-full" value={'0x' + account?.keystore.address}/>   

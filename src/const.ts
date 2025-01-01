@@ -1,10 +1,10 @@
 import { RPC } from "./types";
 
 
-export const defaultRPC:RPC = { name: 'Trigon' , url: 'https://rpc.trigonevm.space' }
+export const defaultRPC:RPC = { name: 'Trigon Main RPC' , url: 'https://rpc.trigonevm.space' }
 
-export const defaultRPCs:RPC[] = [{ name: 'Trigon' , url: 'https://rpc.trigonevm.space' },
-{ name: 'Bitrock', url: 'https://connect.bit-rock.io'}]
+export const defaultRPCs:RPC[] = [{ name: 'Trigon Main RPC' , url: 'https://rpc.trigonevm.space' },
+{ name: 'Trigon Thirdweb', url: 'https://929.rpc.thirdweb.com'}]
 
 export const Default_MIN_Unlock = 15
 

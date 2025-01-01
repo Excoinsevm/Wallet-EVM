@@ -38,7 +38,7 @@ export const Mnemonic:React.FC<Props> = ({password,goNext}) => {
             })
         }
     return(
-<>  <div className="flex justify-center text-lg text-slate-800 font-bold p-3">Asegúrese de guardar la frase semilla</div>
+<>  <div className="flex justify-center text-lg text-slate-800 font-bold p-3">Be sure to save the seed phrase somewhere secure</div>
     <div className="flex flex-col justify-center justify-items-center p-2">
         <div className="grid grid-cols-3 max-w-[350px] shadow-lg border-3 border-cyan-600 rounded-xl justify-items-center gap-3 p-4">
             { words.map((element,index) => (

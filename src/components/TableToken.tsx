@@ -5,7 +5,6 @@ import ClearIcon from '@mui/icons-material/Clear';
 import { ModalAddToken } from "./ModalAddToken";
 import { ModalSend } from "./ModalSend";
 import { useEffect, useState } from "react";
-import { Token } from "../types";
 import { useAccount } from "../store/useAccount";
 import { useRPC } from "../store/useRPC";
 import { ethers } from "ethers";
@@ -13,6 +12,17 @@ import { ABI } from "../const";
 import { getTokenBalance } from "../services/accountService";
 import { Navigate } from "react-router-dom";
 import { usePending } from "../store/usePending";
+
+// Updated Token type
+export interface Token {
+  chainId: number;
+  address: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  logoURI: string;
+  balance?: string;
+}
 
 export const TableToken: React.FC = () => {
   const { account } = useAccount();

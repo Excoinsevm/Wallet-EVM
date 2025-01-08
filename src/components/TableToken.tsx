@@ -28,8 +28,8 @@ export const TableToken: React.FC = () => {
     const fetchTokens = async () => {
       try {
         const response = await fetch("https://unpkg.com/@trigonevm/token-list@latest");
-        const tokens: Token[] = await response.json();
-        setFetchedTokenList(tokens);
+        const data = await response.json();
+        setFetchedTokenList(data.tokens); // Extract tokens array
       } catch (error) {
         console.error("Error fetching tokens:", error);
       }
@@ -114,7 +114,7 @@ export const TableToken: React.FC = () => {
             <TableRow key={element.address}>
               <TableCell>{element.symbol}</TableCell>
               <TableCell width={300}>
-                {ethers.formatUnits(element.balance, element.decimals)}
+                {ethers.formatUnits(element.balance || "0", element.decimals)}
               </TableCell>
               <TableCell>
                 <img src={element.logoURI} alt={element.name} width={32} height={32} />
